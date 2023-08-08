@@ -25,7 +25,7 @@ class SpeakerResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\TextInput::make('name'),
             ]);
     }
 
@@ -72,7 +72,6 @@ class SpeakerResource extends Resource
         return [
             'index' => Pages\ListSpeakers::route('/'),
             'view' => Pages\ViewSpeaker::route('/{record}'),
-            'create' => Pages\CreateSpeaker::route('/create'),
         ];
     }
 }
